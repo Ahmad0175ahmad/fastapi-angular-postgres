@@ -1,59 +1,115 @@
-# Frontend
+# 🚀 Full Stack CRUD Application  
+### Angular + FastAPI + PostgreSQL
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+This is a complete full-stack CRUD (Create, Read, Update, Delete) application built using:
 
-## Development server
+- ⚡ FastAPI (Backend REST API)
+- 🐘 PostgreSQL (Relational Database)
+- 🅰 Angular (Frontend Dashboard)
 
-To start a local development server, run:
+The project demonstrates how Angular communicates with FastAPI APIs and how FastAPI persists data in PostgreSQL.
+
+---
+
+## ✨ Features
+
+- Create users
+- View all users
+- Update users (name + email)
+- Delete users
+- PostgreSQL auto-increment IDs
+- Sorted user list
+- Angular dashboard UI
+- REST API
+- Loading indicator
+- Styled table
+
+---
+
+## 📁 Project Structure
+
+Postgres-with-Fastapi/
+│
+├── frontend/ # Angular frontend
+│
+├── main.py # FastAPI entry point
+├── database.py # SQLAlchemy database connection
+├── models.py # Database models
+├── schemas.py # Pydantic schemas
+├── test_db.py
+├── pyproject.toml
+├── uv.lock
+└── README.md
+
+
+---
+
+## 🧠 Tech Stack
+
+### Backend
+- FastAPI
+- SQLAlchemy
+- Psycopg2
+- PostgreSQL
+
+### Frontend
+- Angular
+- HttpClient
+- FormsModule
+
+---
+
+## ⚙️ Backend Setup (FastAPI + PostgreSQL)
+
+### 1️⃣ Create virtual environment
 
 ```bash
+python -m venv .venv
+.venv\Scripts\activate
+2️⃣ Install dependencies
+uv add fastapi uvicorn sqlalchemy psycopg2-binary
+
+3️⃣ Configure PostgreSQL
+
+Create database:
+
+CREATE DATABASE fastapi_db;
+
+
+Update database.py:
+
+DATABASE_URL = "postgresql://postgres:password@localhost/fastapi_db"
+
+4️⃣ Run FastAPI server
+uvicorn main:app --reload
+
+
+API available at:
+
+http://127.0.0.1:8000
+
+
+Swagger Docs:
+
+http://127.0.0.1:8000/docs
+
+🎨 Frontend Setup (Angular)
+
+Go to frontend folder:
+
+cd frontend
+
+
+Install packages:
+
+npm install
+
+
+Run Angular app:
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Open browser:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+http://localhost:4200
