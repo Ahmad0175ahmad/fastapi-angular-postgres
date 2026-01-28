@@ -1,0 +1,38 @@
+<h2>User Dashboard</h2>
+
+<div class="form">
+  <input [(ngModel)]="name" placeholder="Name">
+  <input [(ngModel)]="email" placeholder="Email">
+  <button (click)="addUser()">Add</button>
+</div>
+
+<p *ngIf="loading">Loading...</p>
+
+<table *ngIf="!loading">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let u of users">
+    <td>{{u.id}}</td>
+
+    <td *ngIf="editId!==u.id">{{u.name}}</td>
+    <td *ngIf="editId===u.id">
+      <input [(ngModel)]="editName">
+    </td>
+
+    <td *ngIf="editId!==u.id">{{u.email}}</td>
+    <td *ngIf="editId===u.id">
+      <input [(ngModel)]="editEmail">
+    </td>
+
+    <td>
+      <button *ngIf="editId!==u.id" (click)="startEdit(u)">✏️</button>
+      <button *ngIf="editId===u.id" (click)="saveEdit(u.id)">💾</button>
+      <button (click)="deleteUser(u.id)">🗑</button>
+    </td>
+  </tr>
+</table>
