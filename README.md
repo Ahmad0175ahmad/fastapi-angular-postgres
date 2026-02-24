@@ -11,7 +11,7 @@ The project demonstrates how Angular communicates with FastAPI APIs and how Fast
 
 --
 
-## ✨ Features.
+## ✨ Features
 - Create users
 - View all users
 - Update users (name + email)
