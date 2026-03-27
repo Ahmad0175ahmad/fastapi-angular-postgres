@@ -1,7 +1,7 @@
 # 🚀 Full Stack CRUD Application  
 ### Angular + FastAPI + PostgreSQL
 
-This is a complete full-stack CRUD (Create, Read, Update, Delete) application built using:
+This is a complete full-stack CRUD (Create, Read, Update, Delete) application built using
 
 - ⚡ FastAPI (Backend REST API)
 - 🐘 PostgreSQL (Relational Database)
