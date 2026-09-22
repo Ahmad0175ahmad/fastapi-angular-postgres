@@ -7,7 +7,7 @@ This is a complete full-stack CRUD (Create, Read, Update, Delete) application bu
 - 🐘 PostgreSQL (Relational Database)
 - 🅰 Angular (Frontend Dashboard)
 
-The project demonstrates how Angular communicates with FastAPI APIs and how FastAPI persists data in PostgreSQL
+The project demonstrates how Angular communicates with FastAPI APIs and how FastAPI persists data in PostgreSQL.
 
 --
 
